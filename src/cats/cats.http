@@ -1,0 +1,15 @@
+### findAll Cats
+GET http://localhost:3000/cats
+
+
+### Create Cats
+POST http://localhost:3000/cats
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "cat01",
+  "age": 1,
+  "breed": "not",
+  "extra": "not"
+}
