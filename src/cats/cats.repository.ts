@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import console from 'console';
-import { PrismaService } from 'src/database/prisma.service';
+import { PrismaService } from '@database/prisma.service';
 import { Cat } from './cats.interface';
 
 @Injectable()
@@ -12,7 +11,6 @@ export class CatsRepository {
         data: { ...cat },
       });
     } catch (error) {
-      console.log(error);
       return null;
     }
   }
@@ -20,7 +18,6 @@ export class CatsRepository {
     try {
       return await this.prisma.cats.findMany();
     } catch (error) {
-      console.log(error);
       return null;
     }
   }
